@@ -393,8 +393,10 @@ body{
 }
 .head-img{
     padding: 30px 15px;
-    width:220px;height:220px;
+    width:220px;
+    height:220px;
     margin:0 auto;
+    overflow:hidden;
     margin-bottom:3%;
 }
 .head-img img {
