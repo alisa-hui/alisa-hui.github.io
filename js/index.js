@@ -168,7 +168,7 @@ $(function(){
                             cobj.font="30px songti";
                             cobj.fillText(num+"%",80-cobj.measureText(num+"%").width/2,90);
                             var t=requestAnimationFrame(circle1);
-                            if (num>=95){
+                            if (num>=92){
                                 cancelAnimationFrame(t);  //取消动画
                             }
                         }
@@ -250,7 +250,7 @@ $(function(){
                         cobj.font="30px songti";
                         cobj.fillText(num+"%",80-cobj.measureText(num+"%").width/2,90);
                         var t=requestAnimationFrame(circle1);
-                        if (num>=85){
+                        if (num>=90){
                             cancelAnimationFrame(t);  //取消动画
                         }
                     }
@@ -291,7 +291,7 @@ $(function(){
                         cobj.font="30px songti";
                         cobj.fillText(num+"%",80-cobj.measureText(num+"%").width/2,90);
                         var t=requestAnimationFrame(circle1);
-                        if (num>=80){
+                        if (num>=88){
                             cancelAnimationFrame(t);  //取消动画
                         }
                     }
@@ -332,7 +332,7 @@ $(function(){
                         cobj.font="30px songti";
                         cobj.fillText(num+"%",80-cobj.measureText(num+"%").width/2,90);
                         var t=requestAnimationFrame(circle1);
-                        if (num>=75){
+                        if (num>=88){
                             cancelAnimationFrame(t);  //取消动画
                         }
                     }
@@ -373,7 +373,7 @@ $(function(){
                         cobj.font="30px songti";
                         cobj.fillText(num+"%",80-cobj.measureText(num+"%").width/2,90);
                         var t=requestAnimationFrame(circle1);
-                        if (num>=70){
+                        if (num>=85){
                             cancelAnimationFrame(t);  //取消动画
                         }
                     }

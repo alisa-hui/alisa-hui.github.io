@@ -426,8 +426,8 @@ body{
     padding: 80px 0;
     background-image: url(../img/skills-bg.jpg);
     background-repeat: no-repeat;
-    background-size: cover;   /*±³¾°ÆÌÂú*/
-    background-attachment: fixed;   /*±³¾°Í¼ÏñÊÇ·ñ¸úËæÒ³Ãæ¹ö¶¯*/
+    background-size: cover; 
+    background-attachment: fixed;   
     background-position: 0 0 ;
     position: relative;
 }
