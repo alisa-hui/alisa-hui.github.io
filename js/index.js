@@ -291,7 +291,7 @@ $(function(){
                         cobj.font="30px songti";
                         cobj.fillText(num+"%",80-cobj.measureText(num+"%").width/2,90);
                         var t=requestAnimationFrame(circle1);
-                        if (num>=88){
+                        if (num>=90){
                             cancelAnimationFrame(t);  //取消动画
                         }
                     }
@@ -373,6 +373,88 @@ $(function(){
                         cobj.font="30px songti";
                         cobj.fillText(num+"%",80-cobj.measureText(num+"%").width/2,90);
                         var t=requestAnimationFrame(circle1);
+                        if (num>=88){
+                            cancelAnimationFrame(t);  //取消动画
+                        }
+                    }
+                    circle1();
+                }
+                canvas();
+                }
+                flag=false;
+            }
+        })
+    }
+    skills7();
+    function skills7(){
+        var flag=true;
+        $(window).scroll(function(){
+            var top=$(window).scrollTop();
+            if(top>=1000){
+                if(!flag){
+                    return;
+                }
+                if(flag){
+                var canvas7=$(".canvas7")[0];
+                var cobj=canvas7.getContext("2d");
+                function canvas(){
+                    var a=0;     //起始弧度
+                    var speed=4;   //弧度的变化值
+                    cobj.lineWidth="10";   //线条的宽度
+                    function circle1(){
+                        a+=speed;
+                        cobj.clearRect(0,0,300,300);  //清除画布
+                        cobj.beginPath();
+                        cobj.arc(80,80,50,0,a*Math.PI/180);
+                        cobj.strokeStyle="green";
+                        cobj.fillStyle="#fff";
+                        cobj.stroke();
+                        cobj.closePath();
+                        var num=(a/360*100).toFixed(0);  //旋转的弧度
+                        cobj.font="30px songti";
+                        cobj.fillText(num+"%",80-cobj.measureText(num+"%").width/2,90);
+                        var t=requestAnimationFrame(circle1);
+                        if (num>=86){
+                            cancelAnimationFrame(t);  //取消动画
+                        }
+                    }
+                    circle1();
+                }
+                canvas();
+                }
+                flag=false;
+            }
+        })
+    }
+    skills8();
+    function skills8(){
+        var flag=true;
+        $(window).scroll(function(){
+            var top=$(window).scrollTop();
+            if(top>=1000){
+                if(!flag){
+                    return;
+                }
+                if(flag){
+                var canvas8=$(".canvas8")[0];
+                var cobj=canvas8.getContext("2d");
+                function canvas(){
+                    var a=0;     //起始弧度
+                    var speed=4;   //弧度的变化值
+                    cobj.lineWidth="10";   //线条的宽度
+                    function circle1(){
+                        a+=speed;
+                        cobj.clearRect(0,0,300,300);  //清除画布
+                        cobj.beginPath();
+                        cobj.arc(80,80,50,0,a*Math.PI/180);
+                        cobj.strokeStyle="green";
+                        cobj.fillStyle="#fff";
+                        cobj.stroke();
+                        cobj.closePath();
+                        var num=(a/360*100).toFixed(0);  //旋转的弧度
+                        cobj.font="30px songti";
+                        cobj.fillText(num+"%",80-cobj.measureText(num+"%").width/2,90);
+                        var t=requestAnimationFrame(circle1);
                         if (num>=85){
                             cancelAnimationFrame(t);  //取消动画
                         }
@@ -385,7 +467,6 @@ $(function(){
             }
         })
     }
-
     /*Experience事件*/
     experience();
     function experience(){
