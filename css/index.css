@@ -500,7 +500,7 @@ body{
     list-style: none;
     margin-top:3%;
 }
-.timeline:before {
+/*.timeline:before {
     content: "";
     position: absolute;
     top: 0;
@@ -508,12 +508,14 @@ body{
     left: 40px;
     width: 2px;
     margin-left: -1px;
+    z-index: 1;
     background-color: #eee;
-}
+}*/
 .timeline > li {
     position: relative;
     margin-bottom: 50px;
     min-height: 50px;
+    width:50%;
 }
 .timeline > li:before,
 .timeline > li:after {
@@ -611,21 +613,22 @@ h4 {
     padding-bottom: 30px;
 }
 @media (min-width: 768px) {
-    .timeline:before {
-        left: 50%;
-    }
+    /*.timeline:before {
+        left: 70%;
+    }*/
     .timeline > li {
         margin-bottom: 100px;
         min-height: 100px;
+        width:100%;
     }
     .timeline > li .timeline-text {
         float: left;
-        width: 41%;
+        width: 60%;
         padding: 0 20px 20px 30px;
         text-align: right;
     }
     .timeline > li .timeline-img {
-        left: 50%;
+        left: 70%;
         width: 100px;
         height: 100px;
         margin-left: -50px;
@@ -644,6 +647,7 @@ h4 {
 @media (min-width: 992px) {
     .timeline > li {
         min-height: 150px;
+        width:100%;
     }
     .timeline > li .timeline-text {
         padding: 0 20px 20px;
@@ -667,7 +671,7 @@ h4 {
         min-height: 170px;
     }
     .timeline > li .timeline-text {
-        padding: 10px 20px 20px 100px;
+        padding: 20px 0px;
     }
     .timeline > li .timeline-img {
         width: 150px;
@@ -1373,7 +1377,7 @@ a:focus,
         opacity: 0;
     }
     100%{
-        transform: translate(0,0);
+        transform: translate(41%,0);
         opacity: 1;
     }
 }
@@ -1383,17 +1387,17 @@ a:focus,
         opacity: 0;
     }
     100%{
-        transform: translate(0,0);
+        transform: translate(41%,0);
         opacity: 1;
     }
 }
-@-webkit-keyframes rightTranslate {
+/*@-webkit-keyframes rightTranslate {
     0%{
         transform: translate(100%,0);
         opacity: 0;
     }
     100%{
-        transform: translate(0,0);
+        transform: translate(50%,0);
         opacity: 1;
     }
 }
@@ -1403,10 +1407,10 @@ a:focus,
         opacity: 0;
     }
     100% {
-        transform: translate(0, 0);
+        transform: translate(50%, 0);
         opacity: 1;
     }
-}
+}*/
 @-webkit-keyframes scale {
     0%{
         transform: scale(0.01);
@@ -1468,3 +1472,13 @@ a:focus,
         width:1170px
     }
 }
+p.about-p{
+	text-align: center;
+	font-size: 16px;
+}
+/*li.timeline-2{
+	position: absolute;
+	left:50%;
+	top:0;
+	z-index: 99999;
+}*/
