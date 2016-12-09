@@ -92,51 +92,51 @@ $(function(){
     }
 
     /*Some Stats自加运动*/
-//  startsAdd();
-//  function startsAdd(){
-//      var i=0;
-//      $(window).scroll(function(){
-//          var top=$(window).scrollTop();
-//          if(top>=2450){
-//              var t=setInterval(num1,20);
-//              var t1=setInterval(num2,0.02);
-//              var t2=setInterval(num3,0.5);
-//              var t3=setInterval(num4,1);
-//          }
-//          function num1() {
-//              i++;
-//              var k=120;
-//              if (i > k) {
-//                  return false;
-//              }
-//              $(".count:eq(0)").html(i);
-//          }
-//          function num2() {
-//              i++;
-//              var j=7600;
-//              if (i > j) {
-//                  return false;
-//              }
-//              $(".count:eq(1)").html(i);
-//          }
-//          function num3() {
-//              i++;
-//              var m=4100;
-//              if (i > m) {
-//                  return false;
-//              }
-//              $(".count:eq(2)").html(i);
-//          }
-//          function num4() {
-//              i++;
-//              var n=3600;
-//              if (i > n) {
-//                  return false;
-//              }
-//              $(".count:eq(3)").html(i);
-//          }
-//      })
-//  }
+    startsAdd();
+    function startsAdd(){
+        var i=0;
+        $(window).scroll(function(){
+            var top=$(window).scrollTop();
+            if(top>=2450){
+                var t=setInterval(num1,20);
+                var t1=setInterval(num2,0.02);
+                var t2=setInterval(num3,0.5);
+                var t3=setInterval(num4,1);
+            }
+            function num1() {
+                i++;
+                var k=120;
+                if (i > k) {
+                    return false;
+                }
+                $(".count:eq(0)").html(i);
+            }
+            function num2() {
+                i++;
+                var j=7600;
+                if (i > j) {
+                    return false;
+                }
+                $(".count:eq(1)").html(i);
+            }
+            function num3() {
+                i++;
+                var m=4100;
+                if (i > m) {
+                    return false;
+                }
+                $(".count:eq(2)").html(i);
+            }
+            function num4() {
+                i++;
+                var n=3600;
+                if (i > n) {
+                    return false;
+                }
+                $(".count:eq(3)").html(i);
+            }
+        })
+    }
 //
 //  /*skills画布事件*/
 //  skills1();
