@@ -92,381 +92,381 @@ $(function(){
     }
 
     /*Some Stats自加运动*/
-    startsAdd();
-    function startsAdd(){
-        var i=0;
-        $(window).scroll(function(){
-            var top=$(window).scrollTop();
-            if(top>=2450){
-                var t=setInterval(num1,20);
-                var t1=setInterval(num2,0.02);
-                var t2=setInterval(num3,0.5);
-                var t3=setInterval(num4,1);
-            }
-            function num1() {
-                i++;
-                var k=120;
-                if (i > k) {
-                    return false;
-                }
-                $(".count:eq(0)").html(i);
-            }
-            function num2() {
-                i++;
-                var j=7600;
-                if (i > j) {
-                    return false;
-                }
-                $(".count:eq(1)").html(i);
-            }
-            function num3() {
-                i++;
-                var m=4100;
-                if (i > m) {
-                    return false;
-                }
-                $(".count:eq(2)").html(i);
-            }
-            function num4() {
-                i++;
-                var n=3600;
-                if (i > n) {
-                    return false;
-                }
-                $(".count:eq(3)").html(i);
-            }
-        })
-    }
-
-    /*skills画布事件*/
-    skills1();
-    function skills1(){
-        var flag=true;
-        $(window).scroll(function(){
-            var top=$(window).scrollTop();
-            if(top>=1000){
-                if(!flag){
-                    return;
-                }
-                if(flag){
-                    var canvas1=$(".canvas1")[0];
-                    var cobj=canvas1.getContext("2d");
-                    function canvas(){
-                        var a=0;     //起始弧度
-                        var speed=4;   //弧度的变化值
-                        cobj.lineWidth="10";   //线条的宽度
-                        function circle1(){
-                            a+=speed;
-                            cobj.clearRect(0,0,300,300);  //清除画布
-                            cobj.beginPath();
-                            cobj.arc(80,80,50,0,a*Math.PI/180);  //x,y起始点 半径 弧度起始 弧度
-                            cobj.strokeStyle="green";
-                            cobj.fillStyle="#fff";
-                            cobj.stroke();
-                            cobj.closePath();
-                            var num=(a/360*100).toFixed(0);  //旋转的弧度
-                            cobj.font="30px songti";
-                            cobj.fillText(num+"%",80-cobj.measureText(num+"%").width/2,90);
-                            var t=requestAnimationFrame(circle1);
-                            if (num>=92){
-                                cancelAnimationFrame(t);  //取消动画
-                            }
-                        }
-                        circle1();
-                    }
-                    canvas();
-                }
-             flag=false;
-            }
-        })
-    }
-    skills2();
-    function skills2(){
-        var flag=true;
-        $(window).scroll(function(){
-            var top=$(window).scrollTop();
-            if(top>=1000){
-                if(!flag){
-                    return;
-                }
-                if(flag){
-                var canvas2=$(".canvas2")[0];
-                var cobj=canvas2.getContext("2d");
-                function canvas(){
-                    var a=0;     //起始弧度
-                    var speed=4;   //弧度的变化值
-                    cobj.lineWidth="10";   //线条的宽度
-                    function circle1(){
-                        a+=speed;
-                        cobj.clearRect(0,0,300,300);  //清除画布
-                        cobj.beginPath();
-                        cobj.arc(80,80,50,0,a*Math.PI/180);
-                        cobj.strokeStyle="green";
-                        cobj.fillStyle="#fff";
-                        cobj.stroke();
-                        cobj.closePath();
-                        var num=(a/360*100).toFixed(0);  //旋转的弧度
-                        cobj.font="30px songti";
-                        cobj.fillText(num+"%",80-cobj.measureText(num+"%").width/2,90);
-                        var t=requestAnimationFrame(circle1);
-                        if (num>=90){
-                            cancelAnimationFrame(t);  //取消动画
-                        }
-                    }
-                    circle1();
-                }
-                canvas();
-            }
-                flag=false;
-            }
-        })
-    }
-    skills3();
-    function skills3(){
-        var flag=true;
-        $(window).scroll(function(){
-            var top=$(window).scrollTop();
-            if(top>=1000){
-                if(!flag){
-                    return;
-                }
-                if(flag){
-                var canvas3=$(".canvas3")[0];
-                var cobj=canvas3.getContext("2d");
-                function canvas(){
-                    var a=0;     //起始弧度
-                    var speed=4;   //弧度的变化值
-                    cobj.lineWidth="10";   //线条的宽度
-                    function circle1(){
-                        a+=speed;
-                        cobj.clearRect(0,0,300,300);  //清除画布
-                        cobj.beginPath();
-                        cobj.arc(80,80,50,0,a*Math.PI/180);
-                        cobj.strokeStyle="green";
-                        cobj.fillStyle="#fff";
-                        cobj.stroke();
-                        cobj.closePath();
-                        var num=(a/360*100).toFixed(0);  //旋转的弧度
-                        cobj.font="30px songti";
-                        cobj.fillText(num+"%",80-cobj.measureText(num+"%").width/2,90);
-                        var t=requestAnimationFrame(circle1);
-                        if (num>=90){
-                            cancelAnimationFrame(t);  //取消动画
-                        }
-                    }
-                    circle1();
-                }
-                canvas();
-            }
-                flag=false;
-            }
-        })
-    }
-    skills4();
-    function skills4(){
-        var flag=true;
-        $(window).scroll(function(){
-            var top=$(window).scrollTop();
-            if(top>=1000){
-                if(!flag){
-                    return;
-                }
-                if(flag){
-                var canvas4=$(".canvas4")[0];
-                var cobj=canvas4.getContext("2d");
-                function canvas(){
-                    var a=0;     //起始弧度
-                    var speed=4;   //弧度的变化值
-                    cobj.lineWidth="10";   //线条的宽度
-                    function circle1(){
-                        a+=speed;
-                        cobj.clearRect(0,0,300,300);  //清除画布
-                        cobj.beginPath();
-                        cobj.arc(80,80,50,0,a*Math.PI/180);
-                        cobj.strokeStyle="green";
-                        cobj.fillStyle="#fff";
-                        cobj.stroke();
-                        cobj.closePath();
-                        var num=(a/360*100).toFixed(0);  //旋转的弧度
-                        cobj.font="30px songti";
-                        cobj.fillText(num+"%",80-cobj.measureText(num+"%").width/2,90);
-                        var t=requestAnimationFrame(circle1);
-                        if (num>=90){
-                            cancelAnimationFrame(t);  //取消动画
-                        }
-                    }
-                    circle1();
-                }
-                canvas();
-            }
-                flag=false;
-            }
-        })
-    }
-    skills5();
-    function skills5(){
-        var flag=true;
-        $(window).scroll(function(){
-            var top=$(window).scrollTop();
-            if(top>=1000){
-                if(!flag){
-                    return;
-                }
-                if(flag){
-                var canvas5=$(".canvas5")[0];
-                var cobj=canvas5.getContext("2d");
-                function canvas(){
-                    var a=0;     //起始弧度
-                    var speed=4;   //弧度的变化值
-                    cobj.lineWidth="10";   //线条的宽度
-                    function circle1(){
-                        a+=speed;
-                        cobj.clearRect(0,0,300,300);  //清除画布
-                        cobj.beginPath();
-                        cobj.arc(80,80,50,0,a*Math.PI/180);
-                        cobj.strokeStyle="green";
-                        cobj.fillStyle="#fff";
-                        cobj.stroke();
-                        cobj.closePath();
-                        var num=(a/360*100).toFixed(0);  //旋转的弧度
-                        cobj.font="30px songti";
-                        cobj.fillText(num+"%",80-cobj.measureText(num+"%").width/2,90);
-                        var t=requestAnimationFrame(circle1);
-                        if (num>=88){
-                            cancelAnimationFrame(t);  //取消动画
-                        }
-                    }
-                    circle1();
-                }
-                canvas();
-                }
-                flag=false;
-            }
-        })
-    }
-    skills6();
-    function skills6(){
-        var flag=true;
-        $(window).scroll(function(){
-            var top=$(window).scrollTop();
-            if(top>=1000){
-                if(!flag){
-                    return;
-                }
-                if(flag){
-                var canvas6=$(".canvas6")[0];
-                var cobj=canvas6.getContext("2d");
-                function canvas(){
-                    var a=0;     //起始弧度
-                    var speed=4;   //弧度的变化值
-                    cobj.lineWidth="10";   //线条的宽度
-                    function circle1(){
-                        a+=speed;
-                        cobj.clearRect(0,0,300,300);  //清除画布
-                        cobj.beginPath();
-                        cobj.arc(80,80,50,0,a*Math.PI/180);
-                        cobj.strokeStyle="green";
-                        cobj.fillStyle="#fff";
-                        cobj.stroke();
-                        cobj.closePath();
-                        var num=(a/360*100).toFixed(0);  //旋转的弧度
-                        cobj.font="30px songti";
-                        cobj.fillText(num+"%",80-cobj.measureText(num+"%").width/2,90);
-                        var t=requestAnimationFrame(circle1);
-                        if (num>=88){
-                            cancelAnimationFrame(t);  //取消动画
-                        }
-                    }
-                    circle1();
-                }
-                canvas();
-                }
-                flag=false;
-            }
-        })
-    }
-    skills7();
-    function skills7(){
-        var flag=true;
-        $(window).scroll(function(){
-            var top=$(window).scrollTop();
-            if(top>=1000){
-                if(!flag){
-                    return;
-                }
-                if(flag){
-                var canvas7=$(".canvas7")[0];
-                var cobj=canvas7.getContext("2d");
-                function canvas(){
-                    var a=0;     //起始弧度
-                    var speed=4;   //弧度的变化值
-                    cobj.lineWidth="10";   //线条的宽度
-                    function circle1(){
-                        a+=speed;
-                        cobj.clearRect(0,0,300,300);  //清除画布
-                        cobj.beginPath();
-                        cobj.arc(80,80,50,0,a*Math.PI/180);
-                        cobj.strokeStyle="green";
-                        cobj.fillStyle="#fff";
-                        cobj.stroke();
-                        cobj.closePath();
-                        var num=(a/360*100).toFixed(0);  //旋转的弧度
-                        cobj.font="30px songti";
-                        cobj.fillText(num+"%",80-cobj.measureText(num+"%").width/2,90);
-                        var t=requestAnimationFrame(circle1);
-                        if (num>=86){
-                            cancelAnimationFrame(t);  //取消动画
-                        }
-                    }
-                    circle1();
-                }
-                canvas();
-                }
-                flag=false;
-            }
-        })
-    }
-    skills8();
-    function skills8(){
-        var flag=true;
-        $(window).scroll(function(){
-            var top=$(window).scrollTop();
-            if(top>=1000){
-                if(!flag){
-                    return;
-                }
-                if(flag){
-                var canvas8=$(".canvas8")[0];
-                var cobj=canvas8.getContext("2d");
-                function canvas(){
-                    var a=0;     //起始弧度
-                    var speed=4;   //弧度的变化值
-                    cobj.lineWidth="10";   //线条的宽度
-                    function circle1(){
-                        a+=speed;
-                        cobj.clearRect(0,0,300,300);  //清除画布
-                        cobj.beginPath();
-                        cobj.arc(80,80,50,0,a*Math.PI/180);
-                        cobj.strokeStyle="green";
-                        cobj.fillStyle="#fff";
-                        cobj.stroke();
-                        cobj.closePath();
-                        var num=(a/360*100).toFixed(0);  //旋转的弧度
-                        cobj.font="30px songti";
-                        cobj.fillText(num+"%",80-cobj.measureText(num+"%").width/2,90);
-                        var t=requestAnimationFrame(circle1);
-                        if (num>=85){
-                            cancelAnimationFrame(t);  //取消动画
-                        }
-                    }
-                    circle1();
-                }
-                canvas();
-                }
-                flag=false;
-            }
-        })
-    }
+//  startsAdd();
+//  function startsAdd(){
+//      var i=0;
+//      $(window).scroll(function(){
+//          var top=$(window).scrollTop();
+//          if(top>=2450){
+//              var t=setInterval(num1,20);
+//              var t1=setInterval(num2,0.02);
+//              var t2=setInterval(num3,0.5);
+//              var t3=setInterval(num4,1);
+//          }
+//          function num1() {
+//              i++;
+//              var k=120;
+//              if (i > k) {
+//                  return false;
+//              }
+//              $(".count:eq(0)").html(i);
+//          }
+//          function num2() {
+//              i++;
+//              var j=7600;
+//              if (i > j) {
+//                  return false;
+//              }
+//              $(".count:eq(1)").html(i);
+//          }
+//          function num3() {
+//              i++;
+//              var m=4100;
+//              if (i > m) {
+//                  return false;
+//              }
+//              $(".count:eq(2)").html(i);
+//          }
+//          function num4() {
+//              i++;
+//              var n=3600;
+//              if (i > n) {
+//                  return false;
+//              }
+//              $(".count:eq(3)").html(i);
+//          }
+//      })
+//  }
+//
+//  /*skills画布事件*/
+//  skills1();
+//  function skills1(){
+//      var flag=true;
+//      $(window).scroll(function(){
+//          var top=$(window).scrollTop();
+//          if(top>=1000){
+//              if(!flag){
+//                  return;
+//              }
+//              if(flag){
+//                  var canvas1=$(".canvas1")[0];
+//                  var cobj=canvas1.getContext("2d");
+//                  function canvas(){
+//                      var a=0;     //起始弧度
+//                      var speed=4;   //弧度的变化值
+//                      cobj.lineWidth="10";   //线条的宽度
+//                      function circle1(){
+//                          a+=speed;
+//                          cobj.clearRect(0,0,300,300);  //清除画布
+//                          cobj.beginPath();
+//                          cobj.arc(80,80,50,0,a*Math.PI/180);  //x,y起始点 半径 弧度起始 弧度
+//                          cobj.strokeStyle="green";
+//                          cobj.fillStyle="#fff";
+//                          cobj.stroke();
+//                          cobj.closePath();
+//                          var num=(a/360*100).toFixed(0);  //旋转的弧度
+//                          cobj.font="30px songti";
+//                          cobj.fillText(num+"%",80-cobj.measureText(num+"%").width/2,90);
+//                          var t=requestAnimationFrame(circle1);
+//                          if (num>=92){
+//                              cancelAnimationFrame(t);  //取消动画
+//                          }
+//                      }
+//                      circle1();
+//                  }
+//                  canvas();
+//              }
+//           flag=false;
+//          }
+//      })
+//  }
+//  skills2();
+//  function skills2(){
+//      var flag=true;
+//      $(window).scroll(function(){
+//          var top=$(window).scrollTop();
+//          if(top>=1000){
+//              if(!flag){
+//                  return;
+//              }
+//              if(flag){
+//              var canvas2=$(".canvas2")[0];
+//              var cobj=canvas2.getContext("2d");
+//              function canvas(){
+//                  var a=0;     //起始弧度
+//                  var speed=4;   //弧度的变化值
+//                  cobj.lineWidth="10";   //线条的宽度
+//                  function circle1(){
+//                      a+=speed;
+//                      cobj.clearRect(0,0,300,300);  //清除画布
+//                      cobj.beginPath();
+//                      cobj.arc(80,80,50,0,a*Math.PI/180);
+//                      cobj.strokeStyle="green";
+//                      cobj.fillStyle="#fff";
+//                      cobj.stroke();
+//                      cobj.closePath();
+//                      var num=(a/360*100).toFixed(0);  //旋转的弧度
+//                      cobj.font="30px songti";
+//                      cobj.fillText(num+"%",80-cobj.measureText(num+"%").width/2,90);
+//                      var t=requestAnimationFrame(circle1);
+//                      if (num>=90){
+//                          cancelAnimationFrame(t);  //取消动画
+//                      }
+//                  }
+//                  circle1();
+//              }
+//              canvas();
+//          }
+//              flag=false;
+//          }
+//      })
+//  }
+//  skills3();
+//  function skills3(){
+//      var flag=true;
+//      $(window).scroll(function(){
+//          var top=$(window).scrollTop();
+//          if(top>=1000){
+//              if(!flag){
+//                  return;
+//              }
+//              if(flag){
+//              var canvas3=$(".canvas3")[0];
+//              var cobj=canvas3.getContext("2d");
+//              function canvas(){
+//                  var a=0;     //起始弧度
+//                  var speed=4;   //弧度的变化值
+//                  cobj.lineWidth="10";   //线条的宽度
+//                  function circle1(){
+//                      a+=speed;
+//                      cobj.clearRect(0,0,300,300);  //清除画布
+//                      cobj.beginPath();
+//                      cobj.arc(80,80,50,0,a*Math.PI/180);
+//                      cobj.strokeStyle="green";
+//                      cobj.fillStyle="#fff";
+//                      cobj.stroke();
+//                      cobj.closePath();
+//                      var num=(a/360*100).toFixed(0);  //旋转的弧度
+//                      cobj.font="30px songti";
+//                      cobj.fillText(num+"%",80-cobj.measureText(num+"%").width/2,90);
+//                      var t=requestAnimationFrame(circle1);
+//                      if (num>=90){
+//                          cancelAnimationFrame(t);  //取消动画
+//                      }
+//                  }
+//                  circle1();
+//              }
+//              canvas();
+//          }
+//              flag=false;
+//          }
+//      })
+//  }
+//  skills4();
+//  function skills4(){
+//      var flag=true;
+//      $(window).scroll(function(){
+//          var top=$(window).scrollTop();
+//          if(top>=1000){
+//              if(!flag){
+//                  return;
+//              }
+//              if(flag){
+//              var canvas4=$(".canvas4")[0];
+//              var cobj=canvas4.getContext("2d");
+//              function canvas(){
+//                  var a=0;     //起始弧度
+//                  var speed=4;   //弧度的变化值
+//                  cobj.lineWidth="10";   //线条的宽度
+//                  function circle1(){
+//                      a+=speed;
+//                      cobj.clearRect(0,0,300,300);  //清除画布
+//                      cobj.beginPath();
+//                      cobj.arc(80,80,50,0,a*Math.PI/180);
+//                      cobj.strokeStyle="green";
+//                      cobj.fillStyle="#fff";
+//                      cobj.stroke();
+//                      cobj.closePath();
+//                      var num=(a/360*100).toFixed(0);  //旋转的弧度
+//                      cobj.font="30px songti";
+//                      cobj.fillText(num+"%",80-cobj.measureText(num+"%").width/2,90);
+//                      var t=requestAnimationFrame(circle1);
+//                      if (num>=90){
+//                          cancelAnimationFrame(t);  //取消动画
+//                      }
+//                  }
+//                  circle1();
+//              }
+//              canvas();
+//          }
+//              flag=false;
+//          }
+//      })
+//  }
+//  skills5();
+//  function skills5(){
+//      var flag=true;
+//      $(window).scroll(function(){
+//          var top=$(window).scrollTop();
+//          if(top>=1000){
+//              if(!flag){
+//                  return;
+//              }
+//              if(flag){
+//              var canvas5=$(".canvas5")[0];
+//              var cobj=canvas5.getContext("2d");
+//              function canvas(){
+//                  var a=0;     //起始弧度
+//                  var speed=4;   //弧度的变化值
+//                  cobj.lineWidth="10";   //线条的宽度
+//                  function circle1(){
+//                      a+=speed;
+//                      cobj.clearRect(0,0,300,300);  //清除画布
+//                      cobj.beginPath();
+//                      cobj.arc(80,80,50,0,a*Math.PI/180);
+//                      cobj.strokeStyle="green";
+//                      cobj.fillStyle="#fff";
+//                      cobj.stroke();
+//                      cobj.closePath();
+//                      var num=(a/360*100).toFixed(0);  //旋转的弧度
+//                      cobj.font="30px songti";
+//                      cobj.fillText(num+"%",80-cobj.measureText(num+"%").width/2,90);
+//                      var t=requestAnimationFrame(circle1);
+//                      if (num>=88){
+//                          cancelAnimationFrame(t);  //取消动画
+//                      }
+//                  }
+//                  circle1();
+//              }
+//              canvas();
+//              }
+//              flag=false;
+//          }
+//      })
+//  }
+//  skills6();
+//  function skills6(){
+//      var flag=true;
+//      $(window).scroll(function(){
+//          var top=$(window).scrollTop();
+//          if(top>=1000){
+//              if(!flag){
+//                  return;
+//              }
+//              if(flag){
+//              var canvas6=$(".canvas6")[0];
+//              var cobj=canvas6.getContext("2d");
+//              function canvas(){
+//                  var a=0;     //起始弧度
+//                  var speed=4;   //弧度的变化值
+//                  cobj.lineWidth="10";   //线条的宽度
+//                  function circle1(){
+//                      a+=speed;
+//                      cobj.clearRect(0,0,300,300);  //清除画布
+//                      cobj.beginPath();
+//                      cobj.arc(80,80,50,0,a*Math.PI/180);
+//                      cobj.strokeStyle="green";
+//                      cobj.fillStyle="#fff";
+//                      cobj.stroke();
+//                      cobj.closePath();
+//                      var num=(a/360*100).toFixed(0);  //旋转的弧度
+//                      cobj.font="30px songti";
+//                      cobj.fillText(num+"%",80-cobj.measureText(num+"%").width/2,90);
+//                      var t=requestAnimationFrame(circle1);
+//                      if (num>=88){
+//                          cancelAnimationFrame(t);  //取消动画
+//                      }
+//                  }
+//                  circle1();
+//              }
+//              canvas();
+//              }
+//              flag=false;
+//          }
+//      })
+//  }
+//  skills7();
+//  function skills7(){
+//      var flag=true;
+//      $(window).scroll(function(){
+//          var top=$(window).scrollTop();
+//          if(top>=1000){
+//              if(!flag){
+//                  return;
+//              }
+//              if(flag){
+//              var canvas7=$(".canvas7")[0];
+//              var cobj=canvas7.getContext("2d");
+//              function canvas(){
+//                  var a=0;     //起始弧度
+//                  var speed=4;   //弧度的变化值
+//                  cobj.lineWidth="10";   //线条的宽度
+//                  function circle1(){
+//                      a+=speed;
+//                      cobj.clearRect(0,0,300,300);  //清除画布
+//                      cobj.beginPath();
+//                      cobj.arc(80,80,50,0,a*Math.PI/180);
+//                      cobj.strokeStyle="green";
+//                      cobj.fillStyle="#fff";
+//                      cobj.stroke();
+//                      cobj.closePath();
+//                      var num=(a/360*100).toFixed(0);  //旋转的弧度
+//                      cobj.font="30px songti";
+//                      cobj.fillText(num+"%",80-cobj.measureText(num+"%").width/2,90);
+//                      var t=requestAnimationFrame(circle1);
+//                      if (num>=86){
+//                          cancelAnimationFrame(t);  //取消动画
+//                      }
+//                  }
+//                  circle1();
+//              }
+//              canvas();
+//              }
+//              flag=false;
+//          }
+//      })
+//  }
+//  skills8();
+//  function skills8(){
+//      var flag=true;
+//      $(window).scroll(function(){
+//          var top=$(window).scrollTop();
+//          if(top>=1000){
+//              if(!flag){
+//                  return;
+//              }
+//              if(flag){
+//              var canvas8=$(".canvas8")[0];
+//              var cobj=canvas8.getContext("2d");
+//              function canvas(){
+//                  var a=0;     //起始弧度
+//                  var speed=4;   //弧度的变化值
+//                  cobj.lineWidth="10";   //线条的宽度
+//                  function circle1(){
+//                      a+=speed;
+//                      cobj.clearRect(0,0,300,300);  //清除画布
+//                      cobj.beginPath();
+//                      cobj.arc(80,80,50,0,a*Math.PI/180);
+//                      cobj.strokeStyle="green";
+//                      cobj.fillStyle="#fff";
+//                      cobj.stroke();
+//                      cobj.closePath();
+//                      var num=(a/360*100).toFixed(0);  //旋转的弧度
+//                      cobj.font="30px songti";
+//                      cobj.fillText(num+"%",80-cobj.measureText(num+"%").width/2,90);
+//                      var t=requestAnimationFrame(circle1);
+//                      if (num>=85){
+//                          cancelAnimationFrame(t);  //取消动画
+//                      }
+//                  }
+//                  circle1();
+//              }
+//              canvas();
+//              }
+//              flag=false;
+//          }
+//      })
+//  }
     /*Experience事件*/
     experience();
     function experience(){
