@@ -500,17 +500,6 @@ body{
     list-style: none;
     margin-top:3%;
 }
-/*.timeline:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 40px;
-    width: 2px;
-    margin-left: -1px;
-    z-index: 1;
-    background-color: #eee;
-}*/
 .timeline > li {
     position: relative;
     margin-bottom: 50px;
@@ -613,9 +602,6 @@ h4 {
     padding-bottom: 30px;
 }
 @media (min-width: 768px) {
-    /*.timeline:before {
-        left: 70%;
-    }*/
     .timeline > li {
         margin-bottom: 100px;
         min-height: 100px;
